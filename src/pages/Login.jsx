@@ -26,11 +26,11 @@ export default function Login() {
     setError("");
 
     if (!form.email.includes("@")) {
-      return setError("Email tidak valid");
+      return setError("Invalid email");
     }
 
     if (form.password.length < 8) {
-      return setError("Password minimal 8 karakter");
+      return setError("Password must be at least 8 characters");
     }
     try {
       setLoading(true);
