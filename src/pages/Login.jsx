@@ -71,7 +71,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600">
       <form
         onSubmit={submit}
-        autoComplete="off"
+        autoComplete="on"
         className="bg-white p-8 rounded-3xl w-full max-w-md space-y-5 shadow-xl"
       >
         <div className="text-center mb-6">
@@ -86,7 +86,7 @@ export default function Login() {
             <input
               type="email"
               placeholder="Email"
-              autoComplete="off"
+              autoComplete="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full outline-none"
@@ -104,7 +104,7 @@ export default function Login() {
             <input
               type="password"
               placeholder="Password"
-              autoComplete="new-password"
+              autoComplete="current-password"
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               className="w-full outline-none"
